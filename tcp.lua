@@ -8,7 +8,7 @@ ffi.cdef[[
     const char* get_message();
     void close_socket();
 ]]
-
+-- 禁止乱拉屎,拉到自己地图目录里面
 local tcp_path = ("%s\\tcp_socket.dll"):format(japi.GetMapName())
 storm.save(tcp_path,storm.load("tcp_socket.tga"))
 local is_lib, lib = pcall(ffi.load, tcp_path)
